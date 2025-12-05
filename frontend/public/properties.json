@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "title": "Spacious 3-bed family house",
+    "type": "house",
+    "price": 250000,
+    "bedroom": 3,
+    "dateAdded": "25-12-2025",
+    "postcode": "BR1",
+    "images": [
+      "/images/property1-1.jpg",
+      "/images/property1-2.jpg"
+    ],
+    "shortDescription": "Bright family house with garden and garage.",
+    "longDescription": "A spacious three bedroom family house with large living area and private garden.",
+    "floorPlan": "/images/floor_plan1.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 2,
+    "title": "Modern 1-bed flat",
+    "type": "flat",
+    "price": 210000,
+    "bedroom": 1,
+    "dateAdded": "25-10-2025",
+    "postcode": "NW1",
+    "images": [
+      "/images/property2-1.jpg",
+      "/images/property2-2.jpg"
+    ],
+    "shortDescription": "Compact modern flat near transport links.",
+    "longDescription": "Nice one-bedroom flat featuring open-plan kitchen and large windows.",
+    "floorPlan": "/images/floor_plan2.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 3,
+    "title": "Large 5-bed detached",
+    "type": "house",
+    "price": 950000,
+    "bedroom": 5,
+    "dateAdded": "19-07-2025",
+    "postcode": "SW3",
+    "images": [
+      "/images/property3-1.jpg",
+      "/images/property3-2.jpg"
+    ],
+    "shortDescription": "Luxury detached house with a large garden and pool.",
+    "longDescription": "High-end five bedroom property with multiple reception rooms and pool.",
+    "floorPlan": "/images/floor_plan3.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 4,
+    "title": "Cosy 2-bed townhouse",
+    "type": "house",
+    "price": 340000,
+    "bedroom": 2,
+    "dateAdded": "19-11-2025",
+    "postcode": "BR1",
+    "images": [
+      "/images/property4-1.jpg",
+      "/images/property4-2.jpg"
+    ],
+    "shortDescription": "Townhouse with modern kitchen and patio.",
+    "longDescription": "Two bedroom townhouse located close to local shops with private patio.",
+    "floorPlan": "/images/floor_plan4.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 5,
+    "title": "Studio apartment central",
+    "type": "flat",
+    "price": 180000,
+    "bedroom": 0,
+    "dateAdded": "22-09-2025",
+    "postcode": "NW1",
+    "images": [
+      "/images/property5-1.jpg",
+      "/images/property5-2.jpg"
+    ],
+    "shortDescription": "Affordable studio in a central location.",
+    "longDescription": "Compact studio ideal for first-time buyers or as a rental investment.",
+    "floorPlan": "/images/floor_plan5.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 6,
+    "title": "Refurbished 4-bed semi",
+    "type": "house",
+    "price": 560000,
+    "bedroom": 4,
+    "dateAdded": "01-10-2025",
+    "postcode": "BR1",
+    "images": [
+      "/images/property6-1.jpg",
+      "/images/property6-2.jpg"
+    ],
+    "shortDescription": "Recently refurbished semi-detached house.",
+    "longDescription": "Four bedroom semi with new kitchen and bathrooms.",
+    "floorPlan": "/images/floor_plan6.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  },
+
+  {
+    "id": 7,
+    "title": "Luxury penthouse flat",
+    "type": "flat",
+    "price": 1250000,
+    "bedroom": 4,
+    "dateAdded": "15-10-2025",
+    "postcode": "SW1",
+    "images": [
+      "/images/property7-1.jpg",
+      "/images/property7-2.jpg"
+    ],
+    "shortDescription": "Penthouse with panoramic views.",
+    "longDescription": "High-spec penthouse apartment with roof terrace and concierge.",
+    "floorPlan": "/images/floor_plan7.jpg",
+    "location": { "lat":  51.406, "lng":  0.02 }
+  }
+]
