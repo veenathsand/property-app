@@ -37,6 +37,7 @@ export default App*/
 import { Routes, Route } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 //import PropertyPage from "./pages/PropertyPage";
+import "../src/App.css";
 
 function App() {
     return (
