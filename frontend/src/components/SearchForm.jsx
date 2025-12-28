@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../styles/SearchForm.css";
 
 function SearchForm({ onSearch }) {
     const [criteria, setCriteria] = useState({
