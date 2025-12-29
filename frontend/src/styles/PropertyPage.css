@@ -1,0 +1,64 @@
+/* Page Container */
+.property-page {
+    background: #f9fafb;
+}
+/* Header Section */
+.property-header {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.property-header h1 {
+    margin: 0;
+    color: #111827;
+}
+
+.property-meta {
+    margin-top: 0.5rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+/* Tabs Section */
+.property-details {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-top: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Floor Plan */
+.floorplan {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* React tabs styling */
+.react-tabs__tab-list {
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 1rem;
+}
+
+.react-tabs__tab {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.react-tabs__tab--selected {
+    border-bottom: 3px solid #2563eb;
+    color: #2563eb;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .property-header {
+        text-align: center;
+    }
+}
