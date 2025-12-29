@@ -3,59 +3,56 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import properties from "../data/properties.json";
 import ImageGallery from "../components/ImageGallery";
+import "../styles/PropertyPage.css";
 
 function PropertyPage() {
     const { id } = useParams();
-    const property = properties.find((p) => p.id === Number(id));
+    const property = properties.find(p => p.id === Number(id));
 
-    if (!property) {
-        return <p>Property not found.</p>;
-    }
+    if (!property) return <p>Property not found</p>;
 
     return (
-        <div className="container">
-            <h1>
-                £{property.price.toLocaleString()} – {property.type}
-            </h1>
-            <p>
-                {property.bedrooms} bedrooms · {property.postcode}
-            </p>
+        <div className="property-page container">
+            {/* HEADER */}
+            <header className="property-header">
+                <h1>£{property.price.toLocaleString()}</h1>
+                <p className="property-meta">
+                    {property.bedroom} bedrooms · {property.type} · {property.postcode}
+                </p>
+            </header>
 
-            {/* Image Gallery */}
+            {/* GALLERY */}
             <ImageGallery images={property.images} />
 
-            {/* Tabs */}
-            <Tabs>
-                <TabList>
-                    <Tab>Description</Tab>
-                    <Tab>Floor Plan</Tab>
-                    <Tab>Location</Tab>
-                </TabList>
+            {/* DETAILS */}
+            <section className="property-details">
+                <Tabs>
+                    <TabList>
+                        <Tab>Description</Tab>
+                        <Tab>Floor Plan</Tab>
+                        <Tab>Location</Tab>
+                    </TabList>
 
-                <TabPanel>
-                    <p>{property.longDescription}</p>
-                </TabPanel>
+                    <TabPanel>
+                        <p>{property.longDescription}</p>
+                    </TabPanel>
 
-                <TabPanel>
-                    <img
-                        src={property.floorPlan}
-                        alt="Floor Plan"
-                        className="floorplan"
-                    />
-                </TabPanel>
+                    <TabPanel>
+                        <img
+                            src={property.floorPlan}
+                            alt="Floor Plan"
+                            className="floorplan"
+                        />
+                    </TabPanel>
 
-                <TabPanel>
-                    <iframe
-                        title="Google Map"
-                        src={property.location}
-                        width="100%"
-                        height="300"
-                        loading="lazy"
-                    ></iframe>
-                </TabPanel>
-            </Tabs>
+                    <TabPanel>
+                        <p>Map coming soon</p>
+                    </TabPanel>
+                </Tabs>
+            </section>
         </div>
     );
 }
+
 
 export default PropertyPage;
