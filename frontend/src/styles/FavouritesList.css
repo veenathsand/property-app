@@ -1,0 +1,64 @@
+.favourites {
+    background: #f8f9fb;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    min-height: 200px;
+    border: 2px dashed #c7d2fe;
+}
+
+.favourites h3 {
+    margin-bottom: 0.75rem;
+}
+
+.favourite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    padding: 0.6rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: grab;
+    gap: 0.5rem;
+}
+
+.favourite-item:active {
+    cursor: grabbing;
+}
+
+.clear-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.45rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: #dc2626;
+}
+
+.drag-handle {
+    cursor: grab;
+    font-size: 1.1rem;
+    padding: 0 0.3rem;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
