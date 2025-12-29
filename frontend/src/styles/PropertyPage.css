@@ -1,6 +1,7 @@
 /* Page Container */
 .property-page {
-    background: #f9fafb;
+    background-color: #ffffff; /* keep it white for clarity on details */
+    padding: 2rem 0;
 }
 /* Header Section */
 .property-header {
@@ -55,6 +56,41 @@
     border-bottom: 3px solid #2563eb;
     color: #2563eb;
 }
+
+/* Back button */
+.back-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.long-description {
+    font-family: 'Georgia', serif; /* serif font */
+    font-size: 1.05rem; /* slightly bigger */
+    line-height: 1.6; /* for readability */
+    color: #1f2937; /* main text color */
+    font-weight: 400; /* normal weight */
+}
+
+/* add italic or different weight */
+.long-description.italic {
+    font-style: italic;
+}
+
+.long-description.bold {
+    font-weight: 600;
+}
+
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
