@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-    background-color:  #e6f4ea;
+    font-family: "Inter", Arial, sans-serif;
+    background-color:  #f3f4f6;
     color: #1f2937;
 }
 
@@ -16,9 +16,20 @@ a {
 /* Global page container */
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 1.5rem;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Links */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
 }
