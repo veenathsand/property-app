@@ -1,3 +1,16 @@
+.search-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.search-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .search-form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -10,17 +23,34 @@
 .search-form label {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.85rem;
     color: #374151;
+    margin-bottom: 0.8rem;
 }
 
 .search-form input,
 .search-form select {
-    margin-top: 0.3rem;
-    padding: 0.6rem 0.75rem;
+    margin-top: 0.4rem;
+    padding: 0.6rem 0.8rem;
     border-radius: 6px;
     border: 1px solid #d1d5db;
+}
+
+.search-btn {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
 }
 
 .search-form button {
