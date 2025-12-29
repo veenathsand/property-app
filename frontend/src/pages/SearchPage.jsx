@@ -1,29 +1,81 @@
-import { useState } from 'react';
+import { useState } from "react";
 import properties from "../data/properties.json";
 import SearchForm from "../components/SearchForm";
 import PropertyCard from "../components/PropertyCard";
+import SortableFavourites from "../components/SortableFavourites";
 import { filterProperties } from "../utils/filterProperties";
+import {
+    DndContext,
+    PointerSensor,
+    useSensor,
+    useSensors,
+    closestCenter
+} from "@dnd-kit/core";
+import "../styles/SearchPage.css";
 
 function SearchPage() {
     const [results, setResults] = useState(properties);
+    const [favourites, setFavourites] = useState([]);
+
+    // For drag-and-drop
+    const sensors = useSensors(useSensor(PointerSensor));
 
     const handleSearch = (criteria) => {
-        const filtered = filterProperties(properties, criteria);
-        setResults(filtered); // Filtering logic comes next
+        setResults(filterProperties(properties, criteria));
+    };
+
+    const addToFavourites = (property) => {
+        if (!favourites.find(f => f.id === property.id)) {
+            setFavourites([...favourites, property]);
+        }
+    };
+
+    // Drag & Drop handler
+    const handleDragEnd = (event) => {
+        const { active, over } = event;
+
+        if (over && over.id === "favourites-dropzone") {
+            const draggedProperty = results.find(p => p.id === active.id);
+            if (draggedProperty && !favourites.find(f => f.id === draggedProperty.id)) {
+                setFavourites([...favourites, draggedProperty]);
+            }
+        }
     };
 
     return (
         <div className="container">
-            <h1>Estate Agent</h1>
-            <SearchForm onSearch={handleSearch} /> // Result will be display here
-            <h2>Search Results ({results.length})</h2>
-            {results.length === 0 && <p>No properties found.</p>}
+            <h1 className="page-title">Estate Agent</h1>
 
-            <div className="results-grid">
-                {results.map(property => (
-                    <PropertyCard key={property.id} property={property} />
-                ))}
-            </div>
+            {/* Search Form */}
+            <section className="search-section">
+                <SearchForm onSearch={handleSearch} />
+            </section>
+
+            {/* Layout: Results + Favourites */}
+            <DndContext
+                sensors={sensors}
+                collisionDetection={closestCenter}
+                onDragEnd={handleDragEnd}
+            >
+                <div className="layout">
+                    {/* Property Results */}
+                    <div className="results-grid">
+                        {results.map(property => (
+                            <PropertyCard
+                                key={property.id}
+                                property={property}
+                                onFavourite={addToFavourites}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Favourites - Dropzone & Sortable */}
+                    <SortableFavourites
+                        favourites={favourites}
+                        setFavourites={setFavourites}
+                    />
+                </div>
+            </DndContext>
         </div>
     );
 }
