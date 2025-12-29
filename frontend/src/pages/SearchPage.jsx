@@ -4,39 +4,39 @@ import SearchForm from "../components/SearchForm";
 import PropertyCard from "../components/PropertyCard";
 import SortableFavourites from "../components/SortableFavourites";
 import { filterProperties } from "../utils/filterProperties";
-import {
-    DndContext,
-    PointerSensor,
-    useSensor,
-    useSensors,
-    closestCenter
-} from "@dnd-kit/core";
 import "../styles/SearchPage.css";
 
 function SearchPage() {
     const [results, setResults] = useState(properties);
     const [favourites, setFavourites] = useState([]);
 
-    const sensors = useSensors(useSensor(PointerSensor));
+    // Search handler
+    const handleSearch = (criteria) => {
+        setResults(filterProperties(properties, criteria));
+    };
 
-    const handleSearch = (criteria) => setResults(filterProperties(properties, criteria));
-
+    // Add to favourites using button
     const addToFavourites = (property) => {
         if (!favourites.find(f => f.id === property.id)) {
             setFavourites([...favourites, property]);
         }
     };
 
-    const handleDragEnd = (event) => {
-        const { active, over } = event;
+    // Handle drag start for native HTML5 drag & drop
+    const handleDragStart = (e, property) => {
+        e.dataTransfer.setData("property", JSON.stringify(property));
+    };
 
-        if (over && over.id === "favourites-dropzone") {
-            const draggedProperty = results.find(p => p.id === active.id);
-            if (draggedProperty && !favourites.find(f => f.id === draggedProperty.id)) {
-                setFavourites([...favourites, draggedProperty]);
-            }
+    // Handle drop on favourites
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const property = JSON.parse(e.dataTransfer.getData("property"));
+        if (!favourites.find(f => f.id === property.id)) {
+            setFavourites([...favourites, property]);
         }
     };
+
+    const handleDragOver = (e) => e.preventDefault();
 
     return (
         <div className="container">
@@ -48,19 +48,30 @@ function SearchPage() {
             </section>
 
             {/* Layout: Results + Favourites */}
-            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-                <div className="layout">
-                    {/* Property Results */}
-                    <div className="results-grid">
-                        {results.map(property => (
-                            <PropertyCard key={property.id} property={property} onFavourite={addToFavourites} />
-                        ))}
-                    </div>
-
-                    {/* Favourites - Drag & Drop */}
-                    <SortableFavourites favourites={favourites} setFavourites={setFavourites} />
+            <div className="layout">
+                {/* Property Results */}
+                <div className="results-grid">
+                    {results.map(property => (
+                        <PropertyCard
+                            key={property.id}
+                            property={property}
+                            onFavourite={addToFavourites}
+                            onDragStart={handleDragStart} // Pass drag handler
+                        />
+                    ))}
                 </div>
-            </DndContext>
+
+                {/* Favourites - Dropzone & sortable */}
+                <div
+                    onDrop={handleDrop}
+                    onDragOver={handleDragOver}
+                >
+                    <SortableFavourites
+                        favourites={favourites}
+                        setFavourites={setFavourites}
+                    />
+                </div>
+            </div>
         </div>
     );
 }
