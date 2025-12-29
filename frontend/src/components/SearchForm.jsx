@@ -117,7 +117,8 @@ function SearchForm({ onSearch }) {
                 />
             </label>
 
-            <button type="submit">Search</button>
+            <button className="search-btn" type="submit">Search</button>
+
         </form>
     );
 }
