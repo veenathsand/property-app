@@ -15,11 +15,16 @@
 }
 
 .page-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #0f172a; /* dark slate */
+    font-size: 3rem;               /* Bigger font size */
+    font-weight: 700;               /* Bold */
+    color: #064e3b;                 /* Green color */
+    text-align: center;             /* Centered horizontally */
+    margin-bottom: 2rem;            /* Space below the title */
+    text-transform: uppercase;      /* Uppercase letters */
+    letter-spacing: 2px;            /* Spacing between letters */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Optional subtle shadow */
 }
+
 
 .search-section {
     background: #ffffff;
