@@ -1,9 +1,9 @@
 .property-card {
     background: white;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .results-grid {
@@ -14,6 +14,7 @@
 
 .property-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .property-card img {
@@ -29,7 +30,7 @@
 }
 
 .property-info {
-    padding: 0.75rem 1rem;
+    padding: 1rem;
 }
 
 .property-info h3 {
@@ -57,19 +58,34 @@
 }
 
 .fav-btn {
-    background: #fee2e2;
+    background: #fef2f2;
     color: #b91c1c;
     border: none;
-    padding: 0.45rem 0.7rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.fav-btn:hover {
+    background: #fecaca;
 }
 
 .details-btn {
     background: linear-gradient(135deg, #004aad, #2563eb);
     color: white;
-    padding: 0.45rem 0.7rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 6px;
     text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.details-btn:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
 
 @media (max-width: 1024px) {
