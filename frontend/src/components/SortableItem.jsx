@@ -25,14 +25,14 @@ export default function SortableItem({ property, onRemove }) {
             <span className="fav-text">£{property.price.toLocaleString()} – {property.postcode}</span>
 
             <button
-                className="remove-btn"
                 onClick={(e) => {
-                    e.stopPropagation(); // Prevent drag interference
+                    e.stopPropagation(); // Prevent DnD interference
                     onRemove(property.id);
                 }}
             >
                 ❌
             </button>
+
         </div>
     );
 }
