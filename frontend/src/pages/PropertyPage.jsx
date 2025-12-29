@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import properties from "../data/properties.json";
@@ -7,12 +7,21 @@ import "../styles/PropertyPage.css";
 
 function PropertyPage() {
     const { id } = useParams();
+    const navigate = useNavigate();
     const property = properties.find(p => p.id === Number(id));
 
     if (!property) return <p>Property not found</p>;
 
     return (
         <div className="property-page container">
+            {/* BACK BUTTON */}
+            <button
+                className="back-btn"
+                onClick={() => navigate(-1)}
+            >
+                ← Back to Search
+            </button>
+
             {/* HEADER */}
             <header className="property-header">
                 <h1>£{property.price.toLocaleString()}</h1>
@@ -28,13 +37,13 @@ function PropertyPage() {
             <section className="property-details">
                 <Tabs>
                     <TabList>
-                        <Tab>Description</Tab>
-                        <Tab>Floor Plan</Tab>
-                        <Tab>Location</Tab>
+                        <Tab><b>Description</b></Tab>
+                        <Tab><b>Floor Plan</b></Tab>
+                        <Tab><b>Location</b></Tab>
                     </TabList>
 
                     <TabPanel>
-                        <p>{property.longDescription}</p>
+                        <p className="long-description">{property.longDescription}</p>
                     </TabPanel>
 
                     <TabPanel>
@@ -46,13 +55,20 @@ function PropertyPage() {
                     </TabPanel>
 
                     <TabPanel>
-                        <p>Map coming soon</p>
+                        <iframe
+                            src={property.location}
+                            width="100%"
+                            height="350"
+                            style={{ border: 0, borderRadius: "12px" }}
+                            loading="lazy"
+                            allowFullScreen
+                        ></iframe>
                     </TabPanel>
+
                 </Tabs>
             </section>
         </div>
     );
 }
-
 
 export default PropertyPage;
