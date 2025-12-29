@@ -2,12 +2,24 @@
     background: white;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     transition: transform 0.2s ease;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
 }
 
 .property-card:hover {
     transform: translateY(-4px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 160px;        /* key line */
+    object-fit: cover;
 }
 
 .property-image {
@@ -17,7 +29,25 @@
 }
 
 .property-info {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.property-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.property-info p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.property-info button,
+.property-info a {
+    display: inline-block;
+    margin-top: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
 }
 
 .property-actions {
