@@ -6,15 +6,12 @@ function ImageGallery({ images = [] }) {
 
     if (!images || images.length === 0) return <p>No images available</p>;
 
-
     return (
         <div className="gallery">
-            <img
-                src={mainImage}
-                alt="Property"
-                className="main-image"
-            />
+            {/* Main Image */}
+            <img src={mainImage} alt="Property" className="main-image" />
 
+            {/* Thumbnail Row */}
             <div className="thumbnail-row">
                 {images.map((img, index) => (
                     <img
