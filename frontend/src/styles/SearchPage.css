@@ -25,6 +25,20 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Optional subtle shadow */
 }
 
+.page-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #16a34a; /* green accent */
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.search-page {
+    background-color: #f8fafc; /* subtle blue-gray */
+    padding: 2rem 0;
+}
 
 .search-section {
     background: #ffffff;
