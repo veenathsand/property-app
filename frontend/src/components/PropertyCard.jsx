@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import "../styles/PropertyCard.css";
 
-function PropertyCard({ property, onFavourite }) {
+function PropertyCard({ property, onFavourite, onDragStart }) {
     return (
-        <div className="property-card" draggable="true">
+        <div
+            className="property-card"
+            draggable
+            onDragStart={(e) => onDragStart(e, property)} // Native drag & drop
+        >
             {/* Main property image */}
             <img
                 src={property.images[0]}
