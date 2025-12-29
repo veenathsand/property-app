@@ -17,12 +17,9 @@ function SearchPage() {
     const [results, setResults] = useState(properties);
     const [favourites, setFavourites] = useState([]);
 
-    // For drag-and-drop
     const sensors = useSensors(useSensor(PointerSensor));
 
-    const handleSearch = (criteria) => {
-        setResults(filterProperties(properties, criteria));
-    };
+    const handleSearch = (criteria) => setResults(filterProperties(properties, criteria));
 
     const addToFavourites = (property) => {
         if (!favourites.find(f => f.id === property.id)) {
@@ -30,7 +27,6 @@ function SearchPage() {
         }
     };
 
-    // Drag & Drop handler
     const handleDragEnd = (event) => {
         const { active, over } = event;
 
@@ -52,28 +48,17 @@ function SearchPage() {
             </section>
 
             {/* Layout: Results + Favourites */}
-            <DndContext
-                sensors={sensors}
-                collisionDetection={closestCenter}
-                onDragEnd={handleDragEnd}
-            >
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
                 <div className="layout">
                     {/* Property Results */}
                     <div className="results-grid">
                         {results.map(property => (
-                            <PropertyCard
-                                key={property.id}
-                                property={property}
-                                onFavourite={addToFavourites}
-                            />
+                            <PropertyCard key={property.id} property={property} onFavourite={addToFavourites} />
                         ))}
                     </div>
 
-                    {/* Favourites - Dropzone & Sortable */}
-                    <SortableFavourites
-                        favourites={favourites}
-                        setFavourites={setFavourites}
-                    />
+                    {/* Favourites - Drag & Drop */}
+                    <SortableFavourites favourites={favourites} setFavourites={setFavourites} />
                 </div>
             </DndContext>
         </div>
