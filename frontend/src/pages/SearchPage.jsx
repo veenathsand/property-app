@@ -41,6 +41,7 @@ function SearchPage() {
     return (
         <div className="container">
             <h1 className="page-title">Estate Agent</h1>
+            <p className="page-subtitle">Discover your dream home</p>
 
             {/* Search Form */}
             <section className="search-section">
