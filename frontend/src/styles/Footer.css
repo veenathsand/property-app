@@ -1,0 +1,67 @@
+.footer {
+    background-color: #111; /* dark professional background */
+    color: #e0e0e0; /* light text for contrast */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 4px solid #1db954;
+}
+
+.footer a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #1db954; /* highlight links on hover */
+}
+
+.footer h2, .footer h3 {
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-branding p {
+    max-width: 250px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.footer-links ul,
+.footer-types ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-types li {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.footer-contact p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-legal {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.footer-legal a {
+    color: #aaa;
+}
+
+.footer-legal a:hover {
+    color: #1db954;
+}
