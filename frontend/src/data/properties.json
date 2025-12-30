@@ -19,7 +19,7 @@
     "shortDescription": "Spacious 3-bedroom house in NW1",
     "longDescription": "This spacious three-bedroom family home is situated in the highly sought-after NW1 area of London. The property offers a generous living and dining area filled with natural light, a modern fitted kitchen with ample storage, and well-proportioned bedrooms ideal for family living. Additional features include contemporary bathrooms, a private rear garden perfect for outdoor relaxation, and excellent access to local schools, transport links, and amenities.",
     "floorPlan": "/images/floor_plan1.png",
-    "location": "https://www.google.com/maps?q=NW1,London,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.541270,-0.142200&output=embed"
 
   },
 
@@ -43,7 +43,7 @@
     "shortDescription": "Modern 1-bedroom flat in E1",
     "longDescription": "This modern one-bedroom flat is located in the vibrant E1 area of London. The property features an open-plan living and kitchen area with large windows that allow plenty of natural light. The bedroom is well-sized and the flat includes a modern bathroom with quality fittings. Ideal for first-time buyers or professionals, the property benefits from excellent transport connections and close proximity to shops, restaurants, and city attractions.",
     "floorPlan": "/images/floor_plan2.png",
-    "location": "https://www.google.com/maps?q=E1,London,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.515450,-0.066200&output=embed"
   },
 
   {
@@ -66,7 +66,7 @@
     "shortDescription": "Luxury 5-bedroom house in BR1",
     "longDescription": "This impressive five-bedroom detached home is located in the desirable BR1 area of Bromley. The property offers multiple spacious reception rooms, a high-quality modern kitchen, and a large ground-floor living area ideal for entertaining. The upper floors include generously sized bedrooms and stylish bathrooms. Outside, the property boasts a private garden, swimming pool, and secure car porch, making it an exceptional choice for luxury family living.",
     "floorPlan": "/images/floor_plan3.png",
-    "location": "https://www.google.com/maps?q=BR1,Bromley,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.403700,0.016400&output=embed"
   },
 
   {
@@ -89,7 +89,7 @@
     "shortDescription": "Compact 2-bedroom house in SW1",
     "longDescription": "Located in the heart of Westminster, this cosy two-bedroom townhouse offers comfortable and modern living in one of London’s most prestigious areas. The property features a bright living area, a fully equipped kitchen, and well-maintained bathrooms. The bedrooms are thoughtfully designed to maximise space and comfort. A private patio provides an ideal outdoor space, while excellent access to transport, shops, and attractions makes this an outstanding central London home.",
     "floorPlan": "/images/floor_plan4.png",
-    "location": "https://www.google.com/maps?q=SW1,London,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.501000,-0.141600&output=embed"
   },
 
   {
@@ -112,7 +112,7 @@
     "shortDescription": "Bright 3-bedroom flat in SE10",
     "longDescription": "This contemporary three-bedroom flat is situated in the popular SE10 area of Greenwich. The property features a spacious living area with large windows, a modern kitchen with integrated appliances, and well-designed bedrooms offering comfort and flexibility. Additional benefits include modern bathrooms, a dining area, and a private balcony. The flat is ideally located close to local amenities, green spaces, and excellent transport links.",
     "floorPlan": "/images/floor_plan5.png",
-    "location": "https://www.google.com/maps?q=SE10,London,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.482600,0.005000&output=embed"
   },
 
   {
@@ -135,7 +135,7 @@
     "shortDescription": "Charming 3-bedroom house in NW3",
     "longDescription": "This refurbished four-bedroom semi-detached house is located in the prestigious NW3 area of Hampstead. The property offers a large living area, a newly fitted modern kitchen, and stylish bathrooms throughout. The bedrooms are spacious and well-lit, making the home ideal for family living. Outside, the property features a generous garden area perfect for leisure and entertaining, with convenient access to schools, parks, and transport links.",
     "floorPlan": "/images/floor_plan6.png",
-    "location": "https://www.google.com/maps?q=NW3,London,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.556000,-0.178500&output=embed"
   },
 
   {
@@ -158,6 +158,6 @@
     "shortDescription": "Modern 4-bedroom flat in CR0",
     "longDescription": "This luxury four-bedroom penthouse apartment is located in the CR0 area of Croydon and offers exceptional modern living. The property features a spacious living and dining area, a high-specification kitchen, and elegantly designed bathrooms. The standout feature is the private outdoor roof terrace offering panoramic views. Additional benefits include premium building security and concierge services, making this penthouse an ideal choice for buyers seeking luxury and convenience.",
     "floorPlan": "/images/floor_plan7.png",
-    "location": "https://www.google.com/maps?q=CR0,Croydon,UK&output=embed"
+    "location": "https://www.google.com/maps?q=51.372100,-0.099500&output=embed"
   }
 ]
