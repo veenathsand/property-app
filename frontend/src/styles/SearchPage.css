@@ -19,10 +19,19 @@
     font-weight: 700;               /* Bold */
     color: #064e3b;                 /* Green color */
     text-align: center;             /* Centered horizontally */
-    margin-bottom: 2rem;            /* Space below the title */
+    margin-bottom: 0.1rem;            /* Space below the title */
     text-transform: uppercase;      /* Uppercase letters */
     letter-spacing: 2px;            /* Spacing between letters */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Optional subtle shadow */
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #1db954; /* lighter accent green */
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 0.1rem;
 }
 
 .page-title::after {
