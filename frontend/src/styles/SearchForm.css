@@ -1,10 +1,11 @@
 .search-section {
-    background: white;
+    background: #f8fafc;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     margin-bottom: 2rem;
+    border: 1px solid #e5e7eb;
 }
+
 
 .search-form h2 {
     font-size: 1.5rem;
