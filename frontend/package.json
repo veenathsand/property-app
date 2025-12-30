@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://veenathsand.github.io/estate-agent-spa",
+  "homepage": "https://veenathsand.github.io/property-app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
