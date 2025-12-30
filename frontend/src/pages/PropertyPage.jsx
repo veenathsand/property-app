@@ -22,6 +22,7 @@ function PropertyPage() {
                 ← Back to Search
             </button>
 
+
             {/* HEADER */}
             <header className="property-header">
                 <h1>£{property.price.toLocaleString()}</h1>
